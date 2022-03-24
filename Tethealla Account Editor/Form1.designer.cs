@@ -40,6 +40,7 @@ namespace Tethealla_Account_Editor
             this.accountNames = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcNumbers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.globalGMs = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.chkBackup = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace Tethealla_Account_Editor
             // mnuOpen
             // 
             this.mnuOpen.Name = "mnuOpen";
-            this.mnuOpen.Size = new System.Drawing.Size(142, 22);
+            this.mnuOpen.Size = new System.Drawing.Size(180, 22);
             this.mnuOpen.Text = "Open";
             this.mnuOpen.Click += new System.EventHandler(this.mnuOpen_Click);
             // 
@@ -77,7 +78,7 @@ namespace Tethealla_Account_Editor
             // 
             this.mnuAddAccount.Enabled = false;
             this.mnuAddAccount.Name = "mnuAddAccount";
-            this.mnuAddAccount.Size = new System.Drawing.Size(142, 22);
+            this.mnuAddAccount.Size = new System.Drawing.Size(180, 22);
             this.mnuAddAccount.Text = "Add account";
             this.mnuAddAccount.Click += new System.EventHandler(this.addAccountToolStripMenuItem_Click);
             // 
@@ -85,14 +86,14 @@ namespace Tethealla_Account_Editor
             // 
             this.mnuSave.Enabled = false;
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(142, 22);
+            this.mnuSave.Size = new System.Drawing.Size(180, 22);
             this.mnuSave.Text = "Save";
             this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
             // 
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(142, 22);
+            this.mnuExit.Size = new System.Drawing.Size(180, 22);
             this.mnuExit.Text = "Exit";
             this.mnuExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
@@ -146,11 +147,25 @@ namespace Tethealla_Account_Editor
             this.globalGMs.Name = "globalGMs";
             this.globalGMs.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // chkBackup
+            // 
+            this.chkBackup.AutoSize = true;
+            this.chkBackup.Checked = true;
+            this.chkBackup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBackup.Enabled = false;
+            this.chkBackup.Location = new System.Drawing.Point(227, 7);
+            this.chkBackup.Name = "chkBackup";
+            this.chkBackup.Size = new System.Drawing.Size(90, 17);
+            this.chkBackup.TabIndex = 3;
+            this.chkBackup.Text = "Save backup";
+            this.chkBackup.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 214);
+            this.Controls.Add(this.chkBackup);
             this.Controls.Add(this.dataTable);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -179,6 +194,7 @@ namespace Tethealla_Account_Editor
         private System.Windows.Forms.DataGridViewTextBoxColumn accountNames;
         private System.Windows.Forms.DataGridViewTextBoxColumn gcNumbers;
         private System.Windows.Forms.DataGridViewComboBoxColumn globalGMs;
+        private System.Windows.Forms.CheckBox chkBackup;
     }
 }
 

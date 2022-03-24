@@ -45,6 +45,10 @@ namespace Tethealla_Account_Editor
             uint gcn_temp;
             int num_to_pad;
 
+            // Create a backup if the option is enabled.
+            if (chkBackup.Checked == true)
+                File.Copy(fileName, fileName + ".bak", true);
+
             using (FileStream fs = File.Open(fileName, FileMode.Open, FileAccess.Write, FileShare.None))
             {
                 using (BinaryWriter reader = new BinaryWriter(fs))
@@ -155,7 +159,8 @@ namespace Tethealla_Account_Editor
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                fileName = dlg.FileName;
+                chkBackup.Enabled = true;
+                fileName = dlg.FileName;            
                 dataTable.Enabled = true;
                 mnuAddAccount.Enabled = true;
                 mnuSave.Enabled = true;
