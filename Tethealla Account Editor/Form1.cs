@@ -173,7 +173,7 @@ namespace Tethealla_Account_Editor
             // Needed in order to fully save edits to our data table in case the the user doesn't leave a cell before saving!      
             dataTable.CommitEdit(DataGridViewDataErrorContexts.Commit);
 
-            // Convert to UInt32 for easy sorting.
+            // Convert to UInt32. Technically not needed for now, but maybe in the future if sorting is added!
             try
             {
                 if (dataTable.CurrentCell.ColumnIndex == 1)
